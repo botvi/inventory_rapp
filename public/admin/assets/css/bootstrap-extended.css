@@ -348,6 +348,11 @@ a {
 	color: rgba(255, 255, 255, .5)!important
 }
 
+.topbar .dropdown-menu {
+	position: absolute;
+    top: 100%;
+    right: 0;
+}
 
 
 .bg-primary {
@@ -361,13 +366,6 @@ a {
 .bg-danger {
 	background-color: #fd3550 !important;
   }
-
-
-
-
-
-
-
 
 
 

@@ -59,6 +59,7 @@ class BarangKeluarController extends Controller
                 'tanggal_keluar' => $request->tanggal_keluar,
                 'jumlah' => $request->jumlah,
                 'tujuan' => $request->tujuan,
+                'yang_mengambil' => "Store Kiper",
             ]);
 
             // Update stok barang

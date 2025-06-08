@@ -31,6 +31,7 @@
                                 <th>Jumlah</th>
                                 <th>Sisa Stok</th> 
                                 <th>Tujuan</th>
+                                <th>Yang Mengambil</th>
                                 <th>Tanggal Keluar</th>
                                 <th>Gambar Barang</th>
                                 <th>Aksi</th>
@@ -46,6 +47,7 @@
                                 <td>{{ $barang_keluar->jumlah }}</td>
                                 <td>{{ $barang_keluar->barang->stok_barang }}</td>
                                 <td>{{ $barang_keluar->tujuan }}</td>
+                                <td>{{ $barang_keluar->yang_mengambil }}</td>
                                 <td>{{ $barang_keluar->tanggal_keluar }}</td>
                                     <td><img src="{{ asset('gambar_barang/' . $barang_keluar->barang->gambar_barang) }}" alt="Gambar" style="width: 100px; height: 100px;"></td>
                                 <td>
@@ -67,6 +69,7 @@
                                 <th>Jumlah</th>
                                 <th>Sisa Stok</th>
                                 <th>Tujuan</th>
+                                <th>Yang Mengambil</th>
                                 <th>Tanggal Keluar</th>
                                 <th>Gambar Barang</th>
                                 <th>Aksi</th>

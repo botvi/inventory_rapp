@@ -72,6 +72,10 @@
                                         @endforeach
                                     </small>
                                 </div>
+                                <div class="col-md-12">
+                                    <label for="yang_mengambil" class="form-label">Yang Mengambil</label>
+                                    <input type="text" class="form-control" id="yang_mengambil" value="Store Kiper" name="yang_mengambil" readonly>
+                                </div>
                                
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary px-5">Simpan</button>

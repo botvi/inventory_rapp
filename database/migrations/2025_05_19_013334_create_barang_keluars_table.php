@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('tanggal_keluar');
             $table->integer('jumlah');
             $table->string('tujuan');
+            $table->string('yang_mengambil');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

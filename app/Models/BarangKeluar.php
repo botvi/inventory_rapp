@@ -13,7 +13,8 @@ class BarangKeluar extends Model
         'barang_id',
         'tanggal_keluar',
         'jumlah',
-        'tujuan'
+        'tujuan',
+        'yang_mengambil'
     ];
     public function user()
     {

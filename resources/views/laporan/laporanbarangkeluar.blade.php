@@ -67,8 +67,10 @@
                 <th>Kode Barang</th>
                 <th>Nama Barang</th>
                 <th>Jumlah</th>
+                <th>Sisa Stok</th>
                 <th>Tanggal Keluar</th>
                 <th>Tujuan</th>
+                <th>Yang Mengambil</th>
                 <th>DiInput Oleh</th>
             </tr>
         </thead>
@@ -79,8 +81,10 @@
                 <td>{{ $barang->barang->kode_barang }}</td>
                 <td>{{ $barang->barang->nama_barang }}</td>
                 <td>{{ $barang->jumlah }}</td>
+                <td>{{ $barang->barang->stok_barang }}</td>
                 <td>{{ \Carbon\Carbon::parse($barang->tanggal_keluar)->format('d/m/Y') }}</td>
                 <td>{{ $barang->tujuan }}</td>
+                <td>{{ $barang->yang_mengambil }}</td>
                 <td>{{ $barang->user->nama }}</td>
             </tr>
             @endforeach

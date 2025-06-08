@@ -44,7 +44,7 @@
                 <div class="row align-items-center">
                 
                     <!-- Form -->
-                    <div class="col-lg-12">
+                    <div class="col-lg-5" style="margin: 0 auto;">
                         <div class="card">
                             <div class="card-body">
                                 <div class="border p-4 rounded">

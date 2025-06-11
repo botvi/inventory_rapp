@@ -1,44 +1,69 @@
 @extends('template-admin.layout')
-
+@section('style')
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+@endsection
 @section('content')
     <div class="page-wrapper">
         <div class="page-content">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6 text-center mb-4">
                     <img src="{{ asset('env') }}/logo_text.jpg" width="250" alt="Logo RAPP" class="img-fluid">
-                    <p class="mt-3">
-                        PT Riau Andalan Pulp and Paper (PT RAPP) adalah perusahaan pulp dan kertas besar di Indonesia yang
-                        merupakan bagian dari APRIL Group. PT RAPP beroperasi di Provinsi Riau, Indonesia, dengan pabrik
-                        utama di Pangkalan Kerinci. Perusahaan ini dikenal karena produksi pulp dan kertas skala besar,
-                        serta berbagai program pengembangan masyarakat dan lingkungan.
-                    </p>
+                   
                 </div>
             </div>
 
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-5">
-                    <div class="card border-primary">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="card-title mb-0">Stok Barang Masuk</h5>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Grafik Stok Barang</h4>
                         </div>
-                        <div class="card-body text-center">
-                            <h2 class="display-4 text-primary">{{ $barang_masuk }}</h2>
-                            <p class="text-muted">Pieces</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5">
-                    <div class="card border-success">
-                        <div class="card-header bg-success text-white">
-                            <h5 class="card-title mb-0">Stok Barang Keluar</h5>
-                        </div>
-                        <div class="card-body text-center">
-                            <h2 class="display-4 text-success">{{ $barang_keluar }}</h2>
-                            <p class="text-muted">Pieces</p>
+                        <div class="card-body">
+                            <canvas id="stokChart"></canvas>
                         </div>
                     </div>
+                 
                 </div>
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+<script>
+    const ctx = document.getElementById('stokChart').getContext('2d');
+    const labels = @json($labels);
+    const stok = @json($stok);
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Stok Barang',
+                data: stok,
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Jumlah Stok'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Nama Barang'
+                    }
+                }
+            }
+        }
+    });
+</script>
 @endsection

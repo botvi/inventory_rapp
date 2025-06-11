@@ -21,6 +21,7 @@
         <div class="card">
             <div class="card-body">
                 <a href="{{ route('barang-keluar.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
+                <a href="{{ route('laporan.barang-keluar') }}" target="_blank" class="btn btn-success mb-3">Cetak Laporan</a>
                 <div class="table-responsive">
                     <table id="example2" class="table table-striped table-bordered">
                             <thead>

@@ -52,13 +52,12 @@
 <body>
     <div class="header">
         <h2>PT. Riau Andalan Pulp Paper (RAPP)</h2>
-        <p>Alamat: Jl. Raya Km. 12, Kel. Sukahati, Kec. Siak, Riau</p>
-        <p>Telepon: (0761) 21212 | Email: info@rapp.com</p>
+        <p>Alamat: Kompl PT. RAPP Estate, Baserah, Desa Gunung Melintang, Kec. Kuantan Hilir, Kab. Kuantan Singingi, Prov. Riau</p>
         <hr style="border: 2px solid #000;">
+        <h3 style="text-align: center;">LAPORAN BARANG KELUAR</h3>
+        <p style="text-align: center;">Tanggal Cetak: {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
     </div>
 
-    <h3 style="text-align: center;">LAPORAN BARANG KELUAR</h3>
-    <p>Tanggal Cetak: {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
 
     <table>
         <thead>

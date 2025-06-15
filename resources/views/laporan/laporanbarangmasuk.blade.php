@@ -21,10 +21,6 @@
         .header p {
             margin: 5px 0;
         }
-        .line {
-            border-top: 2px solid black;
-            margin: 10px 0;
-        }
         table {
             width: 100%;
             border-collapse: collapse;
@@ -52,11 +48,10 @@
 <body>
     <div class="header">
         <h2>PT. Riau Andalan Pulp Paper (RAPP)</h2>
-        <p>Alamat: Jl. Raya Km. 12, Kel. Sukahati, Kec. Siak, Riau</p>
-        <p>Telepon: (0761) 21212 | Email: info@rapp.com</p>
-        <div class="line"></div>
-        <h3>LAPORAN BARANG MASUK</h3>
-        <p>Periode: {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
+        <p>Alamat: Kompl PT. RAPP Estate, Baserah, Desa Gunung Melintang, Kec. Kuantan Hilir, Kab. Kuantan Singingi, Prov. Riau</p>
+        <hr style="border: 2px solid #000;">
+        <h3 style="text-align: center;">LAPORAN BARANG MASUK</h3>
+        <p style="text-align: center;">Tanggal Cetak: {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
     </div>
 
     <table>

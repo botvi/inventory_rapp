@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <label for="yang_mengambil" class="form-label">Yang Mengambil</label>
-                                    <input type="text" class="form-control" id="yang_mengambil" value="{{ $barangKeluar->yang_mengambil }}" name="yang_mengambil" readonly>
+                                    <input type="text" class="form-control" id="yang_mengambil" value="Febri (Store Kiper)" name="yang_mengambil" readonly>
                                 </div>
                                
                                 <div class="col-12">

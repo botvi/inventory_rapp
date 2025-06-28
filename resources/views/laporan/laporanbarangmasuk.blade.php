@@ -47,8 +47,13 @@
 </head>
 <body>
     <div class="header">
-        <h2>PT. Riau Andalan Pulp Paper (RAPP)</h2>
-        <p>Alamat: Kompl PT. RAPP Estate, Baserah, Desa Gunung Melintang, Kec. Kuantan Hilir, Kab. Kuantan Singingi, Prov. Riau</p>
+        <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <img src="https://images.bisnis.com/posts/2017/03/06/765384/rapp.jpg" alt="Logo RAPP" style="width: 80px; height: auto; margin-right: 20px;">
+            <div>
+                <h2 style="margin: 0;">PT. Riau Andalan Pulp Paper (RAPP)</h2>
+                <p style="margin: 5px 0;">Alamat: Kompl PT. RAPP Estate, Baserah, Desa Gunung Melintang, Kec. Kuantan Hilir, Kab. Kuantan Singingi, Prov. Riau</p>
+            </div>
+        </div>
         <hr style="border: 2px solid #000;">
         <h3 style="text-align: center;">LAPORAN BARANG MASUK</h3>
         <p style="text-align: center;">Tanggal Cetak: {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>

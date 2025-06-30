@@ -92,8 +92,8 @@
         <p>{{ $asisten_kiper->nama }}</p>
     </div>
 
-    <div class="no-print" style="text-align: center; margin-top: 20px;">
-        <button onclick="window.print()">Cetak Laporan</button>
-    </div>
+    <script>
+        window.print();
+    </script>
 </body>
 </html>

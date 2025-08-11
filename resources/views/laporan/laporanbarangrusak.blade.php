@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Barang Masuk</title>
+    <title>Laporan Barang Rusak</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,7 +55,7 @@
             </div>
         </div>
         <hr style="border: 2px solid #000;">
-        <h3 style="text-align: center;">LAPORAN BARANG MASUK</h3>
+        <h3 style="text-align: center;">LAPORAN BARANG RUSAK</h3>
         <p style="text-align: center;">Tanggal Cetak: {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
     </div>
 
@@ -65,22 +65,20 @@
                 <th>No</th>
                 <th>Kode Barang</th>
                 <th>Nama Barang</th>
-                <th>Supplier</th>
-                <th>Jumlah Masuk</th>
-                <th>Tanggal Masuk</th>
-                <th>Penanggung Jawab</th>
+                <th>Jumlah Rusak</th>
+                <th>Keterangan</th>
+                <th>DiInput Oleh</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($barang_masuk as $index => $bm)
+            @foreach($barang_rusaks as $index => $br)
             <tr>
                 <td>{{ $index + 1 }}</td>
-                <td>{{ $bm->barang->kode_barang }}</td>
-                <td>{{ $bm->barang->nama_barang }}</td>
-                <td>{{ $bm->supplier->nama_supplier }}</td>
-                <td>{{ $bm->jumlah }}</td>
-                <td>{{ \Carbon\Carbon::parse($bm->tanggal_masuk)->format('d/m/Y') }}</td>
-                <td>{{ $bm->user->nama }}</td>
+                <td>{{ $br->barang->kode_barang }}</td>
+                <td>{{ $br->barang->nama_barang }}</td>
+                <td>{{ $br->jumlah_rusak }}</td>
+                <td>{{ $br->keterangan }}</td>
+                <td>{{ $br->user->nama }}</td>
             </tr>
             @endforeach
         </tbody>

@@ -8,6 +8,7 @@ use App\Models\BarangKeluar;
 use App\Models\Supplier;
 use App\Models\User;
 use App\Models\BarangTersedia;
+use App\Models\BarangRusak;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class LaporanController extends Controller
@@ -36,5 +37,13 @@ class LaporanController extends Controller
             Alert::error('Error', 'Gagal mengambil data barang keluar: ' . $e->getMessage());
             return redirect()->back();
         };
+    }
+
+    public function laporanbarangrusak()
+    {
+        $asisten_kiper = User::where('role', 'asisten_kiper')->first();
+        $barang_rusaks = BarangRusak::with('user', 'barang')
+            ->get();
+        return view('laporan.laporanbarangrusak', compact('barang_rusaks', 'asisten_kiper'));
     }
 }

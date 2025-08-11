@@ -63,6 +63,11 @@
                                 <i class="bx bx-download"></i>Laporan Barang Keluar
                             </a>
                         </li>
+                        <li>
+                            <a class="dropdown-item {{ Request::is('laporan/barang-rusak') ? 'active' : '' }} text-success" target="_blank" href="/laporan/barang-rusak">
+                                <i class="bx bx-download"></i>Laporan Barang Rusak
+                            </a>
+                        </li>
                     </ul>
                 </li>
             @endif
@@ -87,6 +92,14 @@
                     <div class="menu-title">Barang Keluar</div>
                 </a>
             </li>
+            <li class="nav-item dropdown">
+                <a href="/barang-rusak"
+                    class="nav-link dropdown-toggle dropdown-toggle-nocaret {{ Request::is('barang-rusak') ? 'active' : '' }}">
+                    <div class="parent-icon"><i class='bx bx-error-circle'></i>
+                    </div>
+                    <div class="menu-title">Barang Rusak</div>
+                </a>
+            </li>
                 <li class="nav-item dropdown">
                     <a href="javascript:;" class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-bs-toggle="dropdown">
                         <div class="parent-icon"><i class='bx bx-printer text-success'></i></div>
@@ -101,6 +114,11 @@
                         <li>
                             <a class="dropdown-item {{ Request::is('laporan/barang-keluar') ? 'active' : '' }} text-success" target="_blank" href="/laporan/barang-keluar">
                                 <i class="bx bx-download"></i>Laporan Barang Keluar
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item {{ Request::is('laporan/barang-rusak') ? 'active' : '' }} text-success" target="_blank" href="/laporan/barang-rusak">
+                                <i class="bx bx-download"></i>Laporan Barang Rusak
                             </a>
                         </li>
                     </ul>

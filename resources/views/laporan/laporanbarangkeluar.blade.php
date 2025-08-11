@@ -96,7 +96,7 @@
     </table>
 
     <div class="signature">
-        <p>Siak, {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
+        <p>Taluk Kuantan, {{ \Carbon\Carbon::now()->locale('id')->isoFormat('D MMMM Y') }}</p>
         <p>Asisten Kiper</p>
         <br><br><br>
         <p>{{ $asisten_kiper->nama }}</p>
